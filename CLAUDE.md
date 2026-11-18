@@ -11,6 +11,7 @@ Find the folder by name in Google Drive. Save every document, spreadsheet, deck 
 | Business | Overview, plans, legal notes, pitch material |
 | Finance | Financial model and other numbers |
 | Website | Copies of the site files |
+| Sales | Lead tracker, seller one-pager, messages for contacts |
 
 - The main financial model is the Google Sheet in Finance, not the earlier claude.ai copy.
 - Website code is developed in this repository. When the site changes, refresh the copies in the Website folder.
