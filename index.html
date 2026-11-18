@@ -23,6 +23,7 @@
       <nav id="nav" class="site-nav">
         <a href="#como-funciona">Como funciona</a>
         <a href="#vender">Quero vender</a>
+        <a href="#simulador">Simulador</a>
         <a href="#comprar">Quero comprar</a>
         <a href="#perguntas">Perguntas</a>
         <a href="#contacto" class="btn btn-small">Fale connosco</a>
@@ -37,13 +38,14 @@
           <p class="eyebrow">Uma ponte entre gerações</p>
           <h1>A sua casa muda de dono.<br>O seu lar continua seu.</h1>
           <p class="lead">
-            Ligamos pessoas mais velhas que querem rendimento e tranquilidade a jovens
-            que querem um caminho realista para ter casa própria. Quem vende continua a
-            viver na casa e recebe um valor todos os meses. Quem compra investe no seu futuro.
+            Ligamos pessoas mais velhas que querem rendimento e tranquilidade a quem quer
+            investir no futuro. Quem vende continua a viver na sua casa para toda a vida e
+            recebe uma renda mensal ou um valor de uma só vez. Quem compra adquire uma casa
+            abaixo do valor de mercado e ajuda alguém a viver melhor.
           </p>
           <div class="hero-actions">
             <a href="#vender" class="btn">Sou proprietário</a>
-            <a href="#comprar" class="btn btn-outline">Procuro casa</a>
+            <a href="#comprar" class="btn btn-outline">Quero investir</a>
           </div>
         </div>
         <figure class="hero-card" aria-hidden="true">
@@ -106,23 +108,58 @@
       </div>
     </section>
 
-    <section id="comprar" class="section">
+    <section id="simulador" class="section">
+      <div class="container narrow">
+        <p class="eyebrow">Simulador</p>
+        <h2>Quanto pode receber pela sua casa?</h2>
+        <p class="section-lead">Uma estimativa em segundos. O valor final depende sempre de uma avaliação independente da casa.</p>
+        <form class="sim" id="sim" novalidate>
+          <div class="sim-fields">
+            <label>Valor aproximado da casa (€)
+              <input type="number" id="sim-valor" name="valor" min="20000" max="5000000" step="5000" value="200000" inputmode="numeric">
+            </label>
+            <label>A sua idade
+              <input type="number" id="sim-idade" name="idade" min="65" max="100" value="77" inputmode="numeric">
+            </label>
+            <fieldset class="sim-sexo">
+              <legend>Sexo</legend>
+              <label><input type="radio" name="sexo" value="F" checked> Mulher</label>
+              <label><input type="radio" name="sexo" value="M"> Homem</label>
+            </fieldset>
+          </div>
+          <div class="sim-result" aria-live="polite">
+            <div class="sim-card">
+              <span class="sim-label">Renda mensal, para toda a vida</span>
+              <strong class="sim-value" id="sim-mensal">—</strong>
+            </div>
+            <div class="sim-card">
+              <span class="sim-label">Ou, de uma só vez</span>
+              <strong class="sim-value" id="sim-imediato">—</strong>
+            </div>
+          </div>
+          <p class="sim-note" id="sim-note">Em qualquer das opções continua a viver na sua casa até ao fim da vida.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="comprar" class="section section-alt">
       <div class="container split">
         <div>
           <p class="eyebrow">Para quem compra</p>
-          <h2>Um caminho realista para a casa própria</h2>
-          <p>Os preços da habitação afastam os jovens da compra de casa. Aqui, em vez de um crédito enorme logo à partida, paga uma renda mensal acessível e garante o seu futuro.</p>
+          <h2>Invista no seu futuro e ajude alguém a viver melhor</h2>
+          <p>Compra hoje uma casa por cerca de metade do seu valor de mercado, paga ao longo do tempo ou de uma só vez. A casa fica em seu nome desde a escritura e passa a poder usá-la quando o vendedor deixar de lá viver.</p>
+          <p>Para pais que pensam no futuro dos filhos, para quem planeia a sua reforma, ou para quem procura um investimento seguro e com sentido.</p>
         </div>
         <ul class="benefits">
-          <li><strong>Entrada mais baixa</strong> — menos dinheiro necessário no início.</li>
-          <li><strong>Pagamentos previsíveis</strong> — uma renda mensal acordada desde o primeiro dia.</li>
-          <li><strong>Património seu</strong> — a casa fica em seu nome desde a escritura.</li>
-          <li><strong>Impacto real</strong> — ajuda alguém a viver a reforma com dignidade.</li>
+          <li><strong>Abaixo do mercado</strong> — paga cerca de metade do valor da casa.</li>
+          <li><strong>Sem crédito à habitação</strong> — uma renda mensal acordada desde o primeiro dia, ou um único pagamento.</li>
+          <li><strong>Património que valoriza</strong> — a casa é sua desde a escritura e valoriza com o tempo.</li>
+          <li><strong>Impacto real</strong> — ajuda alguém a viver a reforma com dignidade, na sua própria casa.</li>
         </ul>
       </div>
     </section>
 
-    <section id="perguntas" class="section section-alt">
+    <section id="perguntas" class="section">
       <div class="container narrow">
         <h2>Perguntas frequentes</h2>
         <details>
@@ -131,7 +168,15 @@
         </details>
         <details>
           <summary>Como é calculada a renda mensal?</summary>
-          <p>Depende do valor da casa, da idade do vendedor e da entrada paga. Fazemos uma proposta com base numa avaliação independente, e ambas as partes podem negociar.</p>
+          <p>Depende do valor da casa e da idade do vendedor. Ao longo da vida esperada do vendedor, o comprador paga cerca de metade do valor da casa. A renda é atualizada todos os anos com a inflação. A proposta parte sempre de uma avaliação independente.</p>
+        </details>
+        <details>
+          <summary>E se o comprador deixar de pagar?</summary>
+          <p>Se faltarem 5 rendas e a dívida não for paga depois de aviso, o vendedor pode recuperar a casa por inteiro. Nesse caso devolve apenas uma pequena parte das rendas do último ano, em prestações.</p>
+        </details>
+        <details>
+          <summary>E se o comprador morrer?</summary>
+          <p>Os herdeiros do comprador têm 90 dias para decidir se continuam a pagar a renda. Se não continuarem, a casa volta para o vendedor.</p>
         </details>
         <details>
           <summary>Quando é que o comprador pode viver na casa?</summary>
@@ -148,7 +193,7 @@
       </div>
     </section>
 
-    <section id="contacto" class="section">
+    <section id="contacto" class="section section-alt">
       <div class="container narrow">
         <h2>Fale connosco</h2>
         <p class="section-lead">Deixe os seus dados e entraremos em contacto, sem compromisso.</p>
@@ -156,7 +201,7 @@
           <fieldset class="role">
             <legend>Sou…</legend>
             <label><input type="radio" name="perfil" value="vender" required> Proprietário e quero saber mais sobre vender</label>
-            <label><input type="radio" name="perfil" value="comprar"> À procura de casa</label>
+            <label><input type="radio" name="perfil" value="comprar"> Interessado em comprar</label>
             <label><input type="radio" name="perfil" value="familiar"> Familiar de um proprietário</label>
           </fieldset>
           <label>Nome

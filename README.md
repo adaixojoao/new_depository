@@ -8,7 +8,7 @@ Website for **Pedra e Promessa**, a project that connects generations. Older hom
 |--------------|-------------------------------------------------|
 | `index.html` | Single-page site (Portuguese, pt-PT)            |
 | `styles.css` | Styles: warm stone/terracotta palette, responsive |
-| `script.js`  | Mobile menu and contact form handling           |
+| `script.js`  | Mobile menu, seller simulator and contact form  |
 
 There is no build step. It is plain HTML, CSS and JavaScript.
 
@@ -19,6 +19,10 @@ python3 -m http.server 8000
 ```
 
 Then open http://localhost:8000.
+
+## Simulator
+
+The "Simulador" section estimates what a seller receives, using the same rules as the financial model: the buyer pays about half the home's value over the seller's expected remaining life (approximate INE life tables), the amount stops rising after age 78, and the seller's figure is shown after the company's fee (10% monthly, 5% immediate) and 23% VAT. Keep the constants at the top of the simulator code in `script.js` in step with the model.
 
 ## Next steps
 
