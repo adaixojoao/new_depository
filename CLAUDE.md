@@ -23,7 +23,7 @@ Static site in Portuguese (pt-PT): `index.html`, `styles.css`, `script.js`, with
 ## Decisions so far
 
 - Solo setup: the founder, their contacts and a lawyer. No salaries, no co-founders. The financial model in Finance reflects this; the older salaried version is in Finance/Archive.
-- All fees are charged to the seller only (the mediation law forbids fees from both sides). The seller pays 23% VAT on top of our fee, so with an €800 payment the seller receives €750.80.
+- All fees are charged to the seller only (the mediation law forbids fees from both sides), plus 23% VAT. Fees: monthly deals pay a €1,500 setup fee plus 10% of each payment; immediate deals pay 5% of the sale price. With the €400 reference payment the seller receives €350.80. The model's Compare sheet shows these against the earlier, lower fees.
 - Pricing rule: over the seller's expected remaining life (by age and sex, INE life tables), the buyer pays about half the home's value. The monthly payment stops rising after age 78: older sellers get the same monthly amount as a 78-year-old. Reference monthly payment in the model: €400. The model's Pricing sheet calculates each deal.
 - Company form: single-owner limited company (Unipessoal Lda) with an AMI licence from IMPIC. The founder drafts most documents; a lawyer reviews at the end.
 - Each party is shown only their own figure (what the buyer pays, or what the seller receives). The company's fee is stated in the service contract, not advertised.
