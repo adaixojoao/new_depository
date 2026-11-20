@@ -198,6 +198,7 @@ details p { margin: 0 0 16px; color: var(--muted); }
 /* Footer */
 .site-footer { background: #2b2723; color: #e9e2d7; padding: 40px 0; }
 .site-footer p { margin: 0 0 6px; }
+.footer-link { color: #f3c9b6; }
 .small { font-size: .85rem; opacity: .8; }
 
 /* Responsive */
