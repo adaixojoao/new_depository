@@ -83,6 +83,53 @@ sim.addEventListener('input', updateSim);
 sim.addEventListener('submit', (e) => e.preventDefault());
 updateSim();
 
+// Buyer waiting list — no backend yet; validates, builds the lead record and
+// shows a confirmation. Connect sendLead() to a real endpoint before going live.
+function sendLead(type, lead) {
+  // TODO: send to a real endpoint (e.g. Formspree, Netlify Forms or own API).
+  console.info('Lead (not sent, no backend yet):', type, lead);
+}
+
+const waitlist = document.getElementById('waitlist-form');
+const waitlistStatus = waitlist.querySelector('.form-status');
+
+waitlist.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const data = new FormData(waitlist);
+  const missing = [];
+  if (!data.get('nome')?.trim()) missing.push('o seu nome');
+  if (!data.get('contacto')?.trim()) missing.push('um email ou telefone');
+  if (!data.get('pais')) missing.push('onde vive');
+  if (!data.getAll('zona').length) missing.push('pelo menos uma zona');
+  if (!data.get('pagamento')) missing.push('como prefere pagar');
+  if (!data.get('orcamento')) missing.push('quanto poderia investir');
+  if (!data.get('consentimento')) missing.push('a autorização para guardarmos os dados');
+
+  if (missing.length) {
+    waitlistStatus.textContent = `Falta indicar: ${missing.join(', ')}.`;
+    waitlistStatus.className = 'form-status error';
+    return;
+  }
+
+  sendLead('comprador', {
+    nome: data.get('nome').trim(),
+    contacto: data.get('contacto').trim(),
+    pais: data.get('pais'),
+    zonas: data.getAll('zona'),
+    localidade: data.get('localidade')?.trim() || '',
+    pagamento: data.get('pagamento'),
+    orcamento: data.get('orcamento'),
+    objetivo: data.get('objetivo') || '',
+    mensagem: data.get('mensagem')?.trim() || '',
+    consentimento: true,
+    data: new Date().toISOString().slice(0, 10),
+  });
+
+  waitlistStatus.textContent = `Obrigado, ${data.get('nome').trim()}! Está na lista. Vamos contactá-lo em breve para conhecer melhor o que procura.`;
+  waitlistStatus.className = 'form-status ok';
+  waitlist.reset();
+});
+
 // Contact form — no backend yet; validates and shows a confirmation.
 // TODO: send submissions to a real endpoint (e.g. Formspree, Netlify Forms or own API).
 const form = document.getElementById('contact-form');

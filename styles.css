@@ -143,6 +143,24 @@ details p { margin: 0 0 16px; color: var(--muted); }
 .role legend { font-weight: 600; padding: 0 6px; }
 .role label { display: flex; gap: 10px; align-items: center; font-weight: 400; }
 .contact-form .btn { justify-self: start; }
+.contact-form select {
+  font: inherit; padding: 12px 14px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--surface); color: var(--text); width: 100%;
+}
+
+/* Buyer waiting list */
+.split-cta { margin: 32px 0 0; }
+.waitlist-points { margin: 20px 0 0; padding-left: 1.2em; color: var(--muted); }
+.waitlist-points li { margin-bottom: 6px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.check-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px 18px; }
+.role .inline-text { display: grid; gap: 6px; font-weight: 500; margin-top: 8px; }
+.hint { font-weight: 400; color: var(--muted); font-size: .9rem; }
+.consent { display: flex !important; gap: 10px; align-items: flex-start; font-weight: 400 !important; font-size: .95rem; color: var(--muted); }
+.consent input { margin-top: 6px; flex: none; }
+@media (max-width: 720px) {
+  .form-row { grid-template-columns: 1fr; }
+}
 .form-status { margin: 0; font-weight: 500; }
 .form-status.error { color: #a32020; }
 .form-status.ok { color: #2f6b3a; }
