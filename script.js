@@ -19,7 +19,9 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // Simulator: estimate of what the seller receives.
 // Rule: over the seller's expected remaining life, the buyer pays about half the
-// home's value. The monthly amount stops rising after age 78. Seller amounts are
+// home's value, including the fixed 2% yearly increase of the monthly payment, so
+// the monthly figure shown is the first-year amount. The monthly amount stops
+// rising with age after 78 (older sellers are priced as 78). Seller amounts are
 // shown after the company's fee and VAT, so the seller sees only their own figure.
 // Life expectancy: approximate remaining years by age, from INE life tables.
 const LIFE = {
@@ -31,6 +33,12 @@ const AGE_CAP = 78;           // monthly amount stops rising after this age
 const VAT = 0.23;
 const MONTHLY_FEE = 0.10;     // share of each monthly payment
 const IMMEDIATE_FEE = 0.05;   // share of the immediate price
+const YEARLY_INCREASE = 0.02; // fixed yearly increase of the monthly payment
+
+// Sum of a payment that starts at 1 per year and rises each year, over the given years.
+function growthFactor(years) {
+  return YEARLY_INCREASE === 0 ? years : (Math.pow(1 + YEARLY_INCREASE, years) - 1) / YEARLY_INCREASE;
+}
 
 function yearsLeft(sex, age) {
   const table = LIFE[sex];
@@ -62,13 +70,13 @@ function updateSim() {
   }
 
   const total = value * PRICE_SHARE;
-  const buyerMonthly = total / (yearsLeft(sex, Math.min(age, AGE_CAP)) * 12);
+  const buyerMonthly = total / (growthFactor(yearsLeft(sex, Math.min(age, AGE_CAP))) * 12);
   const sellerMonthly = buyerMonthly * (1 - MONTHLY_FEE * (1 + VAT));
   const sellerImmediate = total * (1 - IMMEDIATE_FEE * (1 + VAT));
 
   monthlyOut.textContent = euro.format(sellerMonthly);
   immediateOut.textContent = euro.format(sellerImmediate);
-  note.textContent = 'Estimativa. Em qualquer das opções continua a viver na sua casa até ao fim da vida. A renda é atualizada todos os anos com a inflação.';
+  note.textContent = 'Estimativa. Em qualquer das opções continua a viver na sua casa até ao fim da vida. A renda mensal indicada é a do primeiro ano e aumenta 2% em cada ano.';
 }
 
 sim.addEventListener('input', updateSim);
