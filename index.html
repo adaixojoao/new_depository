@@ -129,7 +129,7 @@
           </div>
           <div class="sim-result" aria-live="polite">
             <div class="sim-card">
-              <span class="sim-label">Renda mensal, para toda a vida</span>
+              <span class="sim-label">Renda mensal no 1.º ano, para toda a vida</span>
               <strong class="sim-value" id="sim-mensal">—</strong>
             </div>
             <div class="sim-card">
@@ -152,10 +152,111 @@
         </div>
         <ul class="benefits">
           <li><strong>Abaixo do mercado</strong> — paga cerca de metade do valor da casa.</li>
-          <li><strong>Sem crédito à habitação</strong> — uma renda mensal acordada desde o primeiro dia, ou um único pagamento.</li>
+          <li><strong>Sem crédito à habitação</strong> — uma renda mensal conhecida desde o primeiro dia (aumenta 2% por ano), ou um único pagamento.</li>
           <li><strong>Património que valoriza</strong> — a casa é sua desde a escritura e valoriza com o tempo.</li>
           <li><strong>Impacto real</strong> — ajuda alguém a viver a reforma com dignidade, na sua própria casa.</li>
         </ul>
+      </div>
+      <div class="container">
+        <p class="split-cta"><a href="#lista-compradores" class="btn">Entrar na lista de compradores</a></p>
+      </div>
+    </section>
+
+    <section id="lista-compradores" class="section">
+      <div class="container narrow">
+        <p class="eyebrow">Lista de compradores</p>
+        <h2>Quer comprar uma casa para o futuro?</h2>
+        <p class="section-lead">Estamos a preparar os primeiros negócios. Diga-nos o que procura e falamos consigo primeiro, sem compromisso.</p>
+        <ul class="waitlist-points">
+          <li>Ideal para quem vive fora e pensa voltar a Portugal, para pais que pensam no futuro dos filhos e para quem quer investir com tempo.</li>
+          <li>Pode pagar ao longo do tempo, sem crédito à habitação, ou de uma só vez.</li>
+          <li>Inscrever-se não obriga a nada e não tem qualquer custo.</li>
+        </ul>
+
+        <form class="contact-form waitlist-form" id="waitlist-form" novalidate>
+          <div class="form-row">
+            <label>Nome
+              <input type="text" name="nome" autocomplete="name" required>
+            </label>
+            <label>Email ou telefone (com indicativo)
+              <input type="text" name="contacto" autocomplete="email" required>
+            </label>
+          </div>
+
+          <label>Onde vive atualmente?
+            <select name="pais" required>
+              <option value="">Escolha…</option>
+              <option>Portugal</option>
+              <option>Países Baixos</option>
+              <option>França</option>
+              <option>Suíça</option>
+              <option>Luxemburgo</option>
+              <option>Alemanha</option>
+              <option>Reino Unido</option>
+              <option>Outro país</option>
+            </select>
+          </label>
+
+          <fieldset class="role">
+            <legend>Em que zona procura casa? <span class="hint">(pode escolher várias)</span></legend>
+            <div class="check-grid">
+              <label><input type="checkbox" name="zona" value="Norte e Porto"> Norte e Porto</label>
+              <label><input type="checkbox" name="zona" value="Centro"> Centro</label>
+              <label><input type="checkbox" name="zona" value="Lisboa e arredores"> Lisboa e arredores</label>
+              <label><input type="checkbox" name="zona" value="Alentejo"> Alentejo</label>
+              <label><input type="checkbox" name="zona" value="Algarve"> Algarve</label>
+              <label><input type="checkbox" name="zona" value="Ilhas"> Açores ou Madeira</label>
+              <label><input type="checkbox" name="zona" value="Indiferente"> Indiferente</label>
+            </div>
+            <label class="inline-text">Localidade preferida (opcional)
+              <input type="text" name="localidade">
+            </label>
+          </fieldset>
+
+          <fieldset class="role">
+            <legend>Como prefere pagar?</legend>
+            <label><input type="radio" name="pagamento" value="mensal" required> Todos os meses, para toda a vida do vendedor</label>
+            <label><input type="radio" name="pagamento" value="imediato"> De uma só vez</label>
+            <label><input type="radio" name="pagamento" value="indeciso"> Ainda não sei</label>
+          </fieldset>
+
+          <label>Quanto poderia investir?
+            <select name="orcamento" required>
+              <option value="">Escolha…</option>
+              <optgroup label="Por mês">
+                <option>Até 400 € por mês</option>
+                <option>400 a 700 € por mês</option>
+                <option>700 a 1.000 € por mês</option>
+                <option>Mais de 1.000 € por mês</option>
+              </optgroup>
+              <optgroup label="De uma só vez">
+                <option>Até 75.000 €</option>
+                <option>75.000 a 150.000 €</option>
+                <option>150.000 a 250.000 €</option>
+                <option>Mais de 250.000 €</option>
+              </optgroup>
+            </select>
+          </label>
+
+          <label>Para quê, sobretudo?
+            <select name="objetivo">
+              <option value="">Escolha… (opcional)</option>
+              <option>Uma casa para a minha reforma</option>
+              <option>Uma casa para os meus filhos</option>
+              <option>Investimento</option>
+              <option>Outro</option>
+            </select>
+          </label>
+
+          <label>Mensagem (opcional)
+            <textarea name="mensagem" rows="3"></textarea>
+          </label>
+
+          <label class="consent"><input type="checkbox" name="consentimento" required> Aceito que a Pedra e Promessa guarde estes dados para me contactar sobre casas disponíveis. Pode pedir para os apagar a qualquer momento.</label>
+
+          <button type="submit" class="btn">Entrar na lista</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
@@ -168,7 +269,7 @@
         </details>
         <details>
           <summary>Como é calculada a renda mensal?</summary>
-          <p>Depende do valor da casa e da idade do vendedor. Ao longo da vida esperada do vendedor, o comprador paga cerca de metade do valor da casa. A renda é atualizada todos os anos com a inflação. A proposta parte sempre de uma avaliação independente.</p>
+          <p>Depende do valor da casa e da idade do vendedor. Ao longo da vida esperada do vendedor, o comprador paga cerca de metade do valor da casa. A renda aumenta 2% todos os anos. A proposta parte sempre de uma avaliação independente.</p>
         </details>
         <details>
           <summary>E se o comprador deixar de pagar?</summary>
@@ -196,7 +297,7 @@
     <section id="contacto" class="section section-alt">
       <div class="container narrow">
         <h2>Fale connosco</h2>
-        <p class="section-lead">Deixe os seus dados e entraremos em contacto, sem compromisso.</p>
+        <p class="section-lead">Deixe os seus dados e entraremos em contacto, sem compromisso. Ou escreva-nos para <a href="mailto:pedraepromessa@gmail.com">pedraepromessa@gmail.com</a>.</p>
         <form class="contact-form" id="contact-form" novalidate>
           <fieldset class="role">
             <legend>Sou…</legend>
@@ -223,6 +324,7 @@
   <footer class="site-footer">
     <div class="container">
       <p><strong>Pedra e Promessa</strong> — casa vendida, lar garantido.</p>
+      <p><a class="footer-link" href="mailto:pedraepromessa@gmail.com">pedraepromessa@gmail.com</a></p>
       <p class="small">A informação neste site é geral e não substitui aconselhamento jurídico ou financeiro.</p>
       <p class="small">© <span id="year"></span> Pedra e Promessa</p>
     </div>
