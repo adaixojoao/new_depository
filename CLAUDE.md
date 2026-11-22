@@ -4,7 +4,15 @@ Website and business work for **Pedra e Promessa**. The project connects generat
 
 ## Where project files go
 
-Find the folder by name in Google Drive. Save every document, spreadsheet, deck and other file for this project in the Google Drive folder **Pedra e Promessa**. Put each file in the subfolder that fits, and add a new subfolder when none does:
+The long-term home for documents is the Google Drive folder **Pedra e Promessa**. While Drive is not connected, working copies live in this repository under the same names: `Business/`, `Finance/` and `Sales/`. The website stays at the repository root. When Drive is available, copy each file into the matching subfolder.
+
+| Folder | Working copy | Drive subfolder |
+|---|---|---|
+| Overview and the testing-phase plan | `Business/overview.md`, `Business/testing-phase.md` | Business |
+| Simulator rules (the model itself stays the Google Sheet) | `Finance/pricing.md` | Finance |
+| Lead tracker, seller one-pager, message for contacts | `Sales/` | Sales |
+
+Save every document, spreadsheet, deck and other file for this project in that Drive folder once it is reachable. Put each file in the subfolder that fits, and add a new subfolder when none does:
 
 | Subfolder | For |
 |---|---|
@@ -15,7 +23,7 @@ Find the folder by name in Google Drive. Save every document, spreadsheet, deck 
 
 - The main financial model is the Google Sheet in Finance, not the earlier claude.ai copy.
 - Website code is developed in this repository. When the site changes, refresh the copies in the Website folder.
-- Update the Business Overview doc in Business when key decisions change.
+- Update `Business/overview.md` when key decisions change, and copy it to the Business Overview in Drive when Drive is connected.
 
 ## Website
 

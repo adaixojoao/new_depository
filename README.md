@@ -24,6 +24,10 @@ Then open http://localhost:8000.
 
 The "Simulador" section estimates what a seller receives, using the same rules as the financial model: the buyer pays about half the home's value over the seller's expected remaining life (approximate INE life tables), the amount stops rising after age 78, and the seller's figure is shown after the company's fee (10% monthly, 5% immediate) and 23% VAT. Keep the constants at the top of the simulator code in `script.js` in step with the model.
 
+## Working files
+
+Business documents for the testing phase are in this repository until Google Drive is connected: `Business/testing-phase.md`, `Business/overview.md`, `Finance/pricing.md` and `Sales/`. Open `Sales/one-pager.html` in a browser to print the seller sheet.
+
 ## Next steps
 
 - Connect the contact form to a real backend (it currently only shows a confirmation).
